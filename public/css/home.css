@@ -1,0 +1,30 @@
+body {
+
+	font-family: 'Helvetica Neue', Helvetica,'黑体', Arial, Verdana, sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+@media (min-width: 1200px) {
+	.container {
+		width: 970px
+	}
+}
+
+#flowchart {
+	max-width: 520px;
+}
+.header > .container {
+	background-color: #cecece;
+	padding-bottom: 15px;
+}
+.slider {
+	padding: 40px;
+}
+.content {
+	padding: 40px 40px;
+}
+.footer > .container {
+	background-color: #cecece;
+	text-align: center;
+	/*padding: 10px;*/
+	padding-top: 10px;
+}

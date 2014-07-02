@@ -1,0 +1,66 @@
+doctype html
+html(lang="zh-CN")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge")
+		meta(name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0,minimum-scale=1.0")
+		meta(name="description" content="")
+		meta(name="author" content="to0r")
+		link(rel="shortcut icon" href="../ico/favicon.ico")
+
+		title Yo帮手
+
+		link(href="../css/bootstrap.min.css" rel="stylesheet")
+		link(href="../css/font-awesome.min.css" rel="stylesheet")
+		link(href="../css/flipclock.css" rel="stylesheet")
+		link(href="../css/coupon.css" rel="stylesheet")
+
+	body
+		.campaign.center-block
+			.step1
+				h3.banner Yo帮手2.0正式发布还有
+				.counter
+				h4.banner 发布当日12:00，Yo帮手根据“完成任务数＋有效建议数”决定iPhone 6等大奖归属
+				table.table#ranking-list
+					thead
+						tr
+							th Yo ID
+							th 姓名
+							th 任务数
+							th 有效建议数
+					tbody
+				a(class="checkmore"   onclick="check_more();") 查看更多
+					img(src="/img/down.png" )
+					
+				button.btn.btn-lg.btn-primary.btn-block(onclick='change_to_coupon();' style='margin-bottom:30px; margin-top:40px') 参与抽奖
+				
+			.step2.hidden
+				h2
+				img(src="/img/photo.png")
+				form.form-signin(role='form' action='http://192.168.2.6:3000/signin' method='POST' id='getInvolved')
+					.form-group
+						//- span.input-group-addon
+						//- 	i.fa.fa-user.fa-lg
+						input.form-control.input-lg(name='id' type='text' placeholder='Yo ID' required='' autofocus='')
+					.form-group
+						//- span.input-group-addon
+						//- 	i.fa.fa-unlock-alt.fa-lg
+						input.form-control.input-lg(name='password' type='password' placeholder='密码' required='')
+					.form-group
+						input.form-control.input-lg(name='name' type='text' placeholder='真实姓名' required='')
+					.form-group
+						input.form-control.input-lg(name='phone' type='text' placeholder='手机号' required='')
+					.alert.alert-warning.alert-dismissable.hidden#submission-message
+						button.close(type="button" data-dismiss="alert" aria-hidden="true") &times;
+						strong Warning!
+					button.btn.btn-lg.btn-primary.btn-block(type='submit' id='submit' style="margin-bottom:30px;") 提交
+				
+			
+				
+
+
+
+		script(src='../js/jquery-1.11.0.min.js')
+		script(src='../js/bootstrap.min.js')
+		script(src='../js/flipclock.js')
+		script(src='../js/campaign.js')
