@@ -8,9 +8,12 @@ block content
   .slider
     .container
       .flexslider
+        h2#a555.slides-caption 50万美元，5年，全家绿卡
+        h2#contact.slides-caption 咨询热线:<br/> 400-036-8278
         ul.slides
           li
             img(src="/img/banner3.jpg")
+            p
           li
             img(src="/img/banner4.jpg")
           li
@@ -120,24 +123,26 @@ block content
               p 请提供联系方式，我们会安排工作人员提供一对一服务
               form#joining-form.form-horizontal(role="form")
                 .form-group
-                  label.col-sm-2.control-label(for="name") 姓名
-                  .col-sm-10
+                  label.col-sm-1.control-label(for="name") 姓名
+                  .col-sm-4
                     input#name.form-control(type="text" placeholder="输入您的姓名")
                 .form-group
-                  label.col-sm-2.control-label(for="phone") 电话
-                  .col-sm-10
+                  label.col-sm-1.control-label(for="phone") 电话
+                  .col-sm-4
                     input#phone.form-control(type="text" placeholder="输入您的电话")
                 .form-group
-                  label.col-sm-2.control-label(for="city") 城市
-                  .col-sm-10
+                  label.col-sm-1.control-label(for="city") 城市
+                  .col-sm-4
                     input#city.form-control(type="text" placeholder="输入您所在城市")
                 .form-group
-                  .col-sm-offset-2.col-sm-10
+                  .col-sm-offset-1.col-sm-4
                     button#submit-button.btn.btn-primary(type="submit") 提交
+                    .loading.hidden
+                      i.fa.fa-spinner.fa-spin.fa-lg
 
   .footer
     .container
-        p www.usa123.com
+        p 上海好识买商务咨询有限公司
 
 block css
   link(href="/css/home.css" rel="stylesheet")

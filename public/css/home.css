@@ -12,18 +12,41 @@ body {
 #flowchart {
 	max-width: 520px;
 }
-.header > .container {
-	background-color: #cecece;
+#submit-button {
+	width: 100%;
+}
+#a555 {
+	bottom: 40px;
+	right: 40px;
+}
+#contact {
+	right: 40px;
+	top: 40px;
+}
+.loading {
+	text-align: center;
+}
+.header {
+	background-color: #2f3246;
 	padding-bottom: 15px;
+	color: #fff;
+}
+.slides-caption {
+	position: absolute;
+	z-index: 100;
+	background-color: rgba(17, 17, 17, 0.6);
+	color: #fff;
 }
 .slider {
-	padding: 40px;
+	padding: 0px;
 }
 .content {
 	padding: 40px 40px;
+	min-height: 760px;
 }
-.footer > .container {
-	background-color: #cecece;
+.footer {
+	background-color: #2f3246;
+	color: #fff;
 	text-align: center;
 	/*padding: 10px;*/
 	padding-top: 10px;

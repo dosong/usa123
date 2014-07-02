@@ -15,6 +15,7 @@ $(document).ready(function($){
 		var phoneInput = $('#phone');
 		var cityInput = $('#city');
 		btn.text('提交中。。')
+		$('.loading').removeClass('hidden');
 		btn.attr('disabled','');
 		nameInput.attr('disabled','');
 		phoneInput.attr('disabled','');
@@ -29,6 +30,13 @@ $(document).ready(function($){
 			if (data.success) {
 				console.log("success");
 				btn.text('提交成功');
+				setTimeout(function(){
+					btn.text('重新提交');
+					btn.removeAttr('disabled');
+					nameInput.removeAttr('disabled');
+					phoneInput.removeAttr('disabled');
+					cityInput.removeAttr('disabled');
+				},1800)
 
 			}
 			else {
@@ -45,6 +53,7 @@ $(document).ready(function($){
 
 		})
 		.always(function() {
+			$('.loading').addClass('hidden');
 			nameInput.val('');
 			phoneInput.val('');
 			cityInput.val('');

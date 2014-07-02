@@ -16,7 +16,7 @@ $(document).ready(function($){
       customers += '</tr>';
     });
     $('#customers-list > tbody').html(customers);
-    $('.loading').html('');
+    $('.loading').addClass('hidden');
   })
   .fail(function(){
     console.log('fail');
