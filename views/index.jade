@@ -118,7 +118,7 @@ block content
             #join.tab-pane.fade
               h3 加入项目
               p 请提供联系方式，我们会安排工作人员提供一对一服务
-              form.form-horizontal(role="form")
+              form#joining-form.form-horizontal(role="form")
                 .form-group
                   label.col-sm-2.control-label(for="name") 姓名
                   .col-sm-10
@@ -133,7 +133,7 @@ block content
                     input#city.form-control(type="text" placeholder="输入您所在城市")
                 .form-group
                   .col-sm-offset-2.col-sm-10
-                    button.btn.btn-primary(type="submit") 提交
+                    button#submit-button.btn.btn-primary(type="submit") 提交
 
   .footer
     .container

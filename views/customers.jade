@@ -1,0 +1,30 @@
+extends layout
+
+block content
+
+  .header
+    .container
+      h3 上海好识买商务咨询有限公司
+
+  .content
+    .container
+      table#customers-list.table.table-hover
+        thead
+          th 姓名
+          th 电话
+          th 城市
+          th 删除
+        tbody
+      .loading
+        i.fa.fa-spinner.fa-spin.fa-3x
+
+  .footer
+    .container
+        p www.usa123.com
+
+block css
+  link(href="/css/home.css" rel="stylesheet")
+  link(href="/css/customers.css" rel="stylesheet")
+
+block js
+  script(src="/js/getCustomers.js")
