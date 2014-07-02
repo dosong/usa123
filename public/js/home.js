@@ -20,7 +20,7 @@ $(document).ready(function($){
 		nameInput.attr('disabled','');
 		phoneInput.attr('disabled','');
 		cityInput.attr('disabled','');
-		console.log(newCustomer);
+		// console.log(newCustomer);
 		$.ajax({
 			url: '/api/addCustomer',
 			type: 'POST',
@@ -28,7 +28,7 @@ $(document).ready(function($){
 		})
 		.done(function(data) {
 			if (data.success) {
-				console.log("success");
+				// console.log("success");
 				btn.text('提交成功');
 				setTimeout(function(){
 					btn.text('重新提交');
@@ -48,7 +48,7 @@ $(document).ready(function($){
 
 		})
 		.fail(function() {
-			console.log("error");
+			// console.log("error");
 			btn.removeAttr('disabled');
 
 		})

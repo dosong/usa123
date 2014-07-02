@@ -8,7 +8,9 @@ body {
 		width: 970px
 	}
 }
-
+.flex-direction-nav {
+	display: none;
+}
 #flowchart {
 	max-width: 520px;
 }
