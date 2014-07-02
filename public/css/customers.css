@@ -1,3 +1,12 @@
 .loading {
   text-align: center;
 }
+
+.paging {
+  text-align: center;
+}
+
+.pager li {
+  margin-right: 2px;
+  margin-left: 2px;
+}

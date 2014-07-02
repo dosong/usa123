@@ -6,8 +6,15 @@ var db = mongo.db("mongodb://usa123:F3HLkygWA7@ds053597.mongolab.com:53597/herok
 /* GET users listing. */
 router.post('/addCustomer', function(req, res) {
   console.log(req.body);
-  var userdata = req.body;
-  db.collection('customers').insert(userdata, function(err, result){
+  var date = new Date();
+  console.log(date);
+  var newCustomer = {
+    name: req.body.name,
+    phone: req.body.phone,
+    city: req.body.city,
+    time: date
+  };
+  db.collection('customers').insert(newCustomer, function(err, result){
     if(err === null) {
       res.send({
         success: true,
@@ -23,9 +30,16 @@ router.post('/addCustomer', function(req, res) {
   });
 });
 
-router.get('/getCustomers', function(req, res) {
+router.post('/getCustomers', function(req, res) {
   console.log(req.body);
-  db.collection('customers').find().toArray(function (err, items) {
+  var pos;
+  if (parseInt(req.body.pos) > 0) {
+    pos = parseInt(req.body.pos);
+  }
+  else {
+    pos = 0;
+  }
+  db.collection('customers').find().sort({time: -1}).skip(pos).limit(10).toArray(function (err, items) {
     if(err){
       console.log(err);
     }

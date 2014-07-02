@@ -13,10 +13,15 @@ block content
           th 姓名
           th 电话
           th 城市
-          th 删除
+          th 时间
         tbody
       .loading
         i.fa.fa-spinner.fa-spin.fa-3x
+      .paging
+
+        ul.pager(pos="0")
+          li#newer: a(href="#") 更新的
+          li#older: a(href="#") 更早的
 
   .footer
     .container
