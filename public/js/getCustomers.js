@@ -18,7 +18,6 @@ $(document).ready(function($){
       customers += '<td>' + this.phone + '</td>';
       customers += '<td>' + this.city + '</td>';
       customers += '<td>' + date.toString() + '</td>';
-      // customers += '<td><a href="#" class="delete-customer" rel="' + this._id + '">delete</a></td>';
       customers += '</tr>';
     });
     $('#customers-list > tbody').html(customers);
@@ -38,7 +37,7 @@ $(document).ready(function($){
       type: 'POST',
       url: '/api/getCustomers',
       data: {
-        pos: pos-10
+        pos: pos-20
       }
     })
     .done(function(data){
@@ -59,8 +58,8 @@ $(document).ready(function($){
 
         });
 
-        if ($('.pager').attr('pos')>=10){
-          $('.pager').attr('pos', parseInt($('.pager').attr('pos')) -10);
+        if ($('.pager').attr('pos')>=20){
+          $('.pager').attr('pos', parseInt($('.pager').attr('pos')) -20);
 
         }
         else {
@@ -83,7 +82,7 @@ $(document).ready(function($){
       type: 'POST',
       url: '/api/getCustomers',
       data: {
-        pos: pos+10
+        pos: pos+20
       }
     })
     .done(function(data){
@@ -102,7 +101,7 @@ $(document).ready(function($){
           customers += '</tr>';
         });
 
-        $('.pager').attr('pos', parseInt($('.pager').attr('pos')) +10);
+        $('.pager').attr('pos', parseInt($('.pager').attr('pos')) +20);
         $('#customers-list > tbody').html(customers);
 
       }

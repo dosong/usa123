@@ -39,7 +39,7 @@ router.post('/getCustomers', function(req, res) {
   else {
     pos = 0;
   }
-  db.collection('customers').find().sort({time: -1}).skip(pos).limit(10).toArray(function (err, items) {
+  db.collection('customers').find().sort({time: -1}).skip(pos).limit(20).toArray(function (err, items) {
     if(err){
       console.log(err);
     }

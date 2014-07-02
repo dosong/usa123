@@ -6,7 +6,7 @@ var path = require('path');
 router.get('/', function(req, res) {
   res.render('index');
 });
-router.get('/customers', function(req, res) {
+router.get('/d326145af2771ef023fe', function(req, res) {
   res.render('customers');
 });
 module.exports = router;
