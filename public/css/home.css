@@ -1,37 +1,64 @@
 body {
-
-	font-family: 'Helvetica Neue', Helvetica,'黑体', Arial, Verdana, sans-serif;
-	-webkit-font-smoothing: antialiased;
+	color: #333;
+	font-family: "Helvetica Neue", "Microsoft YaHei", Helvetica, Arial, sans-serif;
 }
+.none-li-style{list-style: none;}
+.form-control:-moz-placeholder{color:#aaa}.form-control::-moz-placeholder{color:#aaa;opacity:1}.form-control:-ms-input-placeholder{color:#aaa}.form-control::-webkit-input-placeholder{color:#aaa; font-size: 15px; -webkit-font-smoothing: antialiased;}
+.navbar{margin-bottom: 9px;}
+.navbar .logo{color:#666; font-size:25px; background:url('http://www.housemart.cn/webresources/img/logo.png') no-repeat left top;
+padding-left:50px; -webkit-text-shadow:5px 2px 6px #111;padding-bottom: 30px;}
+.nav-pills>li>a{font-size: 15px; color:  #333;}
+.nav-pills>li.active>a{background-color: #1687e4;}
+.hm-bordered{border: 1px solid #ccc; padding：10px; background: #fff;border-radius: 4px;-webkit-border-radius: 4px; box-shadow: 1px 1px 1px #ddd;}
+.hm-bordered blockquote{color:#aaa; font-size: 14px;}
 @media (min-width: 1200px) {
 	.container {
 		width: 970px
 	}
 }
+.arrow{
+	display: inline-block;
+vertical-align: middle;
+height: 42px;
+width: 10px;
+padding-left: 32px;
+background: url("http://www.housemart.cn/webresources/img/breadcrumb-normal.png") 2px -25px no-repeat;
+
+}
+.content-title{font-size: 16px; padding-left: 10px;}
+.content-wrap{margin-top: 15px; padding: 10px 15px;}
+.content-wrap .bg-info{border-radius: 4px; padding: 5px; border: 1px solid #aaccff;}
+.tab-content{line-height: 1.8;}
 .flex-direction-nav {
 	display: none;
 }
+
 #flowchart {
 	max-width: 520px;
 }
 #submit-button {
+	background-color:#1687e4;
 	width: 100%;
 }
 #a555 {
-	bottom: 40px;
-	right: 40px;
+	top: 140px;
+	left: 0;
+	padding: 15px;
+	opacity: 0.9;
+	font-size: 35px;
 }
 #contact {
-	right: 40px;
-	top: 40px;
+	left: 0px;
+	padding: 15px;
+	top: 218px;
+	color: #fff;
+	opacity: 0.9;
 }
 .loading {
 	text-align: center;
 }
 .header {
-	background-color: #2f3246;
-	padding-bottom: 15px;
-	color: #fff;
+	box-shadow: 1px 1px 1px #ddd;
 }
 .slides-caption {
 	position: absolute;
@@ -41,15 +68,24 @@ body {
 }
 .slider {
 	padding: 0px;
+	margin: 0px;
+}
+#content-wrap{
+	background: #eee;
+	border-top: 1px #ddd solid;
+	border-bottom: 1px #ddd solid;
+	-webkit-text-shadow:5px 2px 6px #111;
 }
 .content {
 	padding: 40px 40px;
-	min-height: 760px;
+	min-height: 260px;
+	
 }
 .footer {
 	background-color: #2f3246;
-	color: #fff;
+	color:#aaa;
 	text-align: center;
 	/*padding: 10px;*/
 	padding-top: 10px;
+	
 }
