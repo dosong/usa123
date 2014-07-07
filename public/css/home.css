@@ -6,7 +6,7 @@ body {
 .form-control:-moz-placeholder{color:#aaa}.form-control::-moz-placeholder{color:#aaa;opacity:1}.form-control:-ms-input-placeholder{color:#aaa}.form-control::-webkit-input-placeholder{color:#aaa; font-size: 15px; -webkit-font-smoothing: antialiased;}
 .navbar{margin-bottom: 9px;}
 .navbar .logo{color:#666; font-size:25px; background:url('http://www.housemart.cn/webresources/img/logo.png') no-repeat left top;
-padding-left:50px; -webkit-text-shadow:5px 2px 6px #111;padding-bottom: 30px;}
+padding-left:50px; -webkit-text-shadow:5px 2px 6px #111;padding-bottom: 30px; margin-left: -3px!important;}
 .nav-pills>li>a{font-size: 15px; color:  #333;}
 .nav-pills>li.active>a{background-color: #1687e4;}
 .hm-bordered{border: 1px solid #ccc; padding：10px; background: #fff;border-radius: 4px;-webkit-border-radius: 4px; box-shadow: 1px 1px 1px #ddd;}
@@ -42,19 +42,23 @@ background: url("http://www.housemart.cn/webresources/img/breadcrumb-normal.png"
 	width: 100%;
 }
 #a555 {
-	top: 140px;
+	top: 208px;
 	left: 0;
 	padding: 15px;
-	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70)\9;
+	background: black\9;
+	 filter:alpha(opacity=70);  
+    /* Firefox,Safari(WebKit),Opera */  
+   -ms-filter:alpha(opacity=70);
 	opacity: 0.9;
 	font-size: 35px;
 }
 #contact {
-	left: 0px;
+	top: -13px;
 	padding: 15px;
-	top: 218px;
+	right: 0px;
 	color: #fff;
-	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70)\9;
+	background: none;
+
 	opacity: 0.9;
 }
 .loading {
@@ -79,6 +83,7 @@ background: url("http://www.housemart.cn/webresources/img/breadcrumb-normal.png"
 	border-bottom: 1px #ddd solid;
 	-webkit-text-shadow:5px 2px 6px #111;
 }
+#content-wrap .nav-stacked{border-radius: 5px; padding-bottom: 30px; }
 .content {
 	padding: 40px 40px;
 	min-height: 260px;
